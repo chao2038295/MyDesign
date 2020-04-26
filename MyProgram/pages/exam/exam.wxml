@@ -1,0 +1,31 @@
+<!--pages/exam/exam.wxml-->
+
+
+
+<view class="content-box">
+<view class="cav-box">
+  <canvas class="canvas-style" canvas-id="firstCanvas"></canvas>
+  
+</view>
+
+<view class="content title">考试内容</view>
+<block wx:for="{{examList}}" wx:key="index">
+<view  class="content">
+  <view>考试科目：{{item.exam_name}}</view>
+  <view>考试教室：{{item.exam_room}}</view>
+  <view>考试时间：{{item.exam_time}}</view>
+</view>
+</block>
+<view class="item-page-box">
+  <view class="item-page">
+  <block wx:for="{{pageList}}" wx:key="index" >
+    <text class="page-text  {{ pageTemp[index] ? 'page-temp' :'' }}" data-text="{{item}}" bind:tap="choosePage">{{ item }}</text>
+  </block>
+  </view>
+</view>
+
+
+
+
+
+</view>

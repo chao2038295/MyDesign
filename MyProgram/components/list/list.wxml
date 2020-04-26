@@ -1,0 +1,11 @@
+<!--components/list/list.js.wxml-->
+
+<view class="content">
+	<block wx:for="{{list}}" wx:key="index">
+		<view class="list-item">
+      <view class="list-item-view">{{item.course_name}}</view>
+      <view class="list-item-view">{{item.course_teacher}}</view>
+      <view class="list-item-view">{{item.class_room}}</view>
+    </view>
+	</block>
+</view>

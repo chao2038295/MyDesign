@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/userInfo/userInfo",
+    "pages/findClass/findClass",
+    "pages/schedule/schedule",
+    "pages/exam/exam"
+  ],
+  "tabBar": {
+    "selectedColor":"#00b26a",
+    "list": [
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "学生课表",
+        "iconPath": "./assets/课表.png",
+        "selectedIconPath": "./assets/sel-课表.png"
+      },
+      {
+        "pagePath": "pages/findClass/findClass",
+        "text": "教室查询",
+        "iconPath": "./assets/教室.png",
+        "selectedIconPath": "./assets/sel-教室.png"
+      },
+      {
+        "pagePath": "pages/exam/exam",
+        "text": "考试查询",
+        "iconPath": "./assets/查询.png",
+        "selectedIconPath": "./assets/sel-查询.png"
+      },
+      {
+        "pagePath": "pages/userInfo/userInfo",
+        "text": "个人信息",
+        "iconPath": "./assets/用户.png",
+        "selectedIconPath": "./assets/sel-用户.png"
+      }
+    ]
+  },
+ 
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

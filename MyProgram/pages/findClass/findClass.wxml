@@ -1,0 +1,22 @@
+<!--pages/findClass/findClass.wxml-->
+
+<view class="show-box">
+	<view class="show-text">{{ showText }}</view>
+	<view class="show-info">(请输入查询周次，查询星期与查询课程时间)</view>
+	<scroll-view scroll-x class="show-text scl-style">
+		<block wx:for="{{ roomList }}" wx:key="inde">
+			<text space="nbsp">{{ item }} </text>
+		</block>
+	</scroll-view>
+
+</view>
+
+<view class="useInput-box">
+	<input class="input-style" bindblur="inWeekTime" placeholder="请输入查询周次:(1-20)"></input>
+	<view class="input-text {{ weekTimeTemp ? 'warn' :'' }}">{{weekTimeText}}</view>
+	<input class="input-style" bindblur="inWeekly" placeholder="请输入查询星期(1-7)"></input>
+	<view class="input-text  {{ weeklyTemp ? 'warn' :'' }}">{{weeklyText}}</view>
+	<input class="input-style" bindblur="inClassTime" placeholder="请输入查询的课程时间(1-5)"></input>
+	<view class="input-text  {{ classTimeTemp ? 'warn' :'' }}">{{classTimeText}}</view>
+	<button bind:tap="findRoom" class="btn">点击请求</button>
+</view>

@@ -1,0 +1,33 @@
+
+<view class="req-box">
+	<input placeholder="请输入周次(如：1，默认第1周)" bindblur="getWeek" class='input-style'></input>
+	<button bind:tap="getWeekList" class="btn">点击请求周课表</button>
+</view>
+<scroll-view scroll-x class="content-box">
+	<view class="content">
+		<view class="week">
+			<view class="week-item goust"></view>
+			<block wx:for="{{weekList}}" wx:key="index">
+				<text class="week-item">{{item}}</text>
+			</block>
+		</view>
+
+
+		<view class="content-text">
+			<view class="time">
+				<block wx:for="{{timeList}}" wx:key="index">
+					<view class="time-item">
+						<view class="time-item-text">{{item}}</view>
+					</view>
+				</block>
+			</view>
+			<cpnList class="content-item" list="{{nowWeek[0].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[1].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[2].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[3].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[4].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[5].schedule_course}}" />
+			<cpnList class="content-item" list="{{nowWeek[6].schedule_course}}" />
+		</view>
+	</view>
+</scroll-view>

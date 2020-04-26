@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cpnList":"../../components/list/list"
+  },
+  "navigationBarTitleText": "学生课表"
+}

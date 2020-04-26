@@ -1,0 +1,12 @@
+<!--pages/userInfo/userInfo.wxml-->
+
+<view class="content">
+<text class="title">学生个人信息</text>
+	<view>学生姓名:	{{userInfo.stu_name}}</view>
+	<view>学生年龄:	{{userInfo.stu_age}}</view>
+	<view>个人学号:	{{userInfo.stu_id}}</view>
+	<view>班级ID:	{{userInfo.stu_classId}}</view>
+	<view>班级名:	{{userInfo.stu_className}}</view>
+	<view>所在系ID:	{{userInfo.stu_depId}}</view>
+	<view>所在系名:	{{userInfo.stu_depName}}</view>
+</view>
